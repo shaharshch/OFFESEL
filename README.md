@@ -19,16 +19,16 @@ pip install skfeature-chappers
 Define the experiments: a dictionary with the names of the feature selection model and classifier to be used.
 ```python
 expirements = {'OFFESEL' : [choose classifier (percptron/hoeffding_tree, 'offesel']}
-
+```
 Define the datasets to be used: a dictionary with the dataset name, dataset path, target index, and the number of epochs for training.
 ```python
 datasets_info = {data set name :[data set path, target index , 1]}
-
+```
 Define the filename of the CSV results file, and the headers to be used.
 ```python
 filename = 'results.csv'
 headers = ['Timestamp', 'Dataset Name', 'Model Name', 'Classifier', 'Accuracy','Computation Time', 'Feature Selection Time', 'Training Time']
-
+```
 Loop through each dataset and experiment combination, and run the apply_experiment function on each. This function takes in the dataset path, dataset name, target index, number of epochs, batch sizes, fractions of features, classifier, and feature selection model. It returns a summary dictionary with the results of the experiment.
 ```python
 for dataset_name, dataset_params in datasets_info.items():
@@ -41,8 +41,7 @@ for dataset_name, dataset_params in datasets_info.items():
                                    fractions=[0.1, 0.15, 0.2],
                                    classifier=exp_params[0], 
                                    model=exp_params[1])
-                                   
-                                 
+```                                                                  
 Print the summary of each experiment and write it to the CSV results file.
 ```python
 result_string = f"{summary['Timestamp']} - Dataset: {summary['Dataset Name']}, Model: {summary['Model Name']}, Accuracy: {summary['Accuracy']}, Computation Time: {summary['Computation Time']}, Feature Selection Time: {summary['Feature Selection Time']}, Training Time: {summary['Training Time']}"
@@ -54,4 +53,5 @@ with open(filename, 'a', encoding='UTF8', newline='') as file:
     dictwriter_object.writerow(summary)
 
 file.close()
+```
 
