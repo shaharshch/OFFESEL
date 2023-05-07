@@ -16,11 +16,11 @@ pip install skfeature-chappers
 ```
 
 ## Usage
-Define the experiments: a dictionary with the names of the feature selection model and classifier to be used.
+1. Define the experiments: a dictionary with the names of the feature selection model and classifier (Percptron/Hoeffding Tree) to be used.
 ```python
-expirements = {'OFFESEL' : [choose classifier (percptron/hoeffding_tree, 'offesel']}
+expirements = {'OFFESEL' : ['percptron', 'offesel']}
 ```
-Define the datasets to be used: a dictionary with the dataset name, dataset path, target index, and the number of epochs for training.
+2. Define the datasets to be used: a dictionary with the dataset name, dataset path, target index, and the number of epochs for training.
 ```python
 datasets_info = {data set name :[data set path, target index , 1]}
 ```
