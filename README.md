@@ -13,7 +13,7 @@ To use OFFESEL, you will need to install the following packages:
 ```python
 pip install scikit-multiflow
 pip install skfeature-chappers
-
+```
 
 ## Usage
 Define the experiments: a dictionary with the names of the feature selection model and classifier to be used.
