@@ -70,7 +70,7 @@ This repository contains the results of experiments conducted using different cl
 - [online_boosting](results/online_boosting): Results for the Online Boosting classifier.
 - [perceptron](results/perceptron): Results for the Perceptron classifier.
 - [vfdt](results/vfdt): Results for the VFDT classifier.
-- [feature_selection_time](results/feature_selection_time.csv): Feature selection time comparison between OFFESEL and online max variance, online LS, online MCFS, FIRES.
+- [feature_selection_time](results/feature_selection_time.xsls): Feature selection time comparison between OFFESEL and online max variance, online LS, online MCFS, FIRES.
 
 ### Subfolder Structure
 
