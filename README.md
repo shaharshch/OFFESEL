@@ -60,4 +60,30 @@ with open(filename, 'a', encoding='UTF8', newline='') as file:
 
 file.close()
 ```
+## Results
+
+This repository contains the results of experiments conducted using different classifiers and feature selection methods. The experiments compare the performance of the OFFESEL against various unsupervised and supervised feature selection methods, including online max variance, online LS, online MCFS, FIRES, and the full feature space.
+
+### Folder Structure
+
+- [lsvm](results/lsvm): Results for the LSVM classifier.
+- [online_boosting](results/online_boosting): Results for the Online Boosting classifier.
+- [perceptron](results/perceptron): Results for the Perceptron classifier.
+- [vfdt](results/vfdt): Results for the VFDT classifier.
+- [feature_selection_time](results/feature_selection_time.csv): Feature selection time comparison between OFFESEL and online max variance, online LS, online MCFS, FIRES.
+
+### Subfolder Structure
+
+Within each classifier folder (lsvm, online_boosting, perceptron, vfdt), you'll find three subfolders:
+
+- **accuracy**: Contains accuracy comparison results.
+- **training_time**: Contains training time (ms) comparison results.
+- **computation_time**: Contains computation time (ms) comparison results.
+
+Each subfolder contains three CSV files corresponding to OFFESEL comparisons with online max variance, online LS, online MCFS, FIRES, and the full feature space.
+
+
+### Instructions
+
+To explore the detailed results, navigate to the respective classifier and metric folders. The CSV files provide a comprehensive overview of the experiments.
 
